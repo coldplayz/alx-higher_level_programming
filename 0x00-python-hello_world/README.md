@@ -8,4 +8,6 @@
 
 * 3-print_number.py: uses a formatted string.
 
+* 4-print_float.py: print float to 2 d.p.
+
 
