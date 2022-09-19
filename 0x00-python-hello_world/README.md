@@ -12,4 +12,6 @@
 
 * 5-print_string.py: print string multiple times.
 
+* 6-concat.py: concatenate strings.
+
 
