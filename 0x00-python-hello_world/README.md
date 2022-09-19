@@ -14,4 +14,6 @@
 
 * 6-concat.py: concatenate strings.
 
+* 7-edges.py: print substrings within a string.
+
 
