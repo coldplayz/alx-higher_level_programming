@@ -16,4 +16,6 @@
 
 * 7-edges.py: print substrings within a string.
 
+* 8-concat_edges.py: print one part of a string.
+
 
