@@ -18,4 +18,8 @@
 
 * 8-concat_edges.py: print one part of a string.
 
+* 9-easter_egg.py: print with minimal code.
+
+* 10-check_cycle.c: check if a singly-linked list has a cycle in it.
+
 
