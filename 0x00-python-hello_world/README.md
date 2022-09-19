@@ -10,4 +10,6 @@
 
 * 4-print_float.py: print float to 2 d.p.
 
+* 5-print_string.py: print string multiple times.
+
 
