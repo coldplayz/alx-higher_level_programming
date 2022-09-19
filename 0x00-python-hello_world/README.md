@@ -6,4 +6,6 @@
 
 * 2-print.py: prints a string.
 
+* 3-print_number.py: uses a formatted string.
+
 
