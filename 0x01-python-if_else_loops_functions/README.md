@@ -4,4 +4,6 @@
 
 * 1-last_digit.py: print last digit of random signed number.
 
+* 2-print_alphabet.py: print the ASCII alphabet, in lowercase, not followed by a new line.
+
 
