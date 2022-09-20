@@ -8,4 +8,6 @@
 
 * 3-print_alphabt.py: print all alphabet, except q and e.
 
+* 4-print_hexa.py: print numbers in hexadecimal.
+
 
