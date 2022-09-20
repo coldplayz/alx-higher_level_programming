@@ -12,4 +12,6 @@
 
 * 5-print_comb2.py: print numbers from 0 - 99 with width of two.
 
+* 6-print_comb3.py: print all different combination of two digits.
+
 
