@@ -14,4 +14,6 @@
 
 * 6-print_comb3.py: print all different combination of two digits.
 
+* 7-islower.py: returns True if char is lower; False otherwise.
+
 

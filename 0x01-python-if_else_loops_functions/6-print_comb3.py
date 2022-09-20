@@ -9,4 +9,3 @@ for i in range(9):
             print(89)
         else:
             print("{:02d}, ".format(j), end='')
-
