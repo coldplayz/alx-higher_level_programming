@@ -23,8 +23,9 @@ def uppercase(strr):
 
     for i in strr:
         if islower(i):
-            if counter == (len(strr) - 1):
-                print("{}".format(upper[ord(i) - 97]))
-            else:
-                print("{}".format(upper[ord(i) - 97]), end=', ')
+            i = "{}".format(upper[ord(i) - 97])
+        if counter == (len(strr) - 1):  # at strr end
+            print("{}".format(i))
+        else:
+            print("{}".format(i), end='')
         counter += 1
