@@ -6,4 +6,6 @@
 
 * 2-print_alphabet.py: print the ASCII alphabet, in lowercase, not followed by a new line.
 
+* 3-print_alphabt.py: print all alphabet, except q and e.
+
 
