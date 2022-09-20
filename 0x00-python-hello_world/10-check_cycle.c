@@ -14,12 +14,12 @@ int check_cycle(listint_t *list)
 	in int_struct = {0, 0, 1};
 	st ptr_struct;
 
-	if (head == NULL)
+	if (list == NULL)
 	{
 		return (0);
 	}
 
-	ptr_struct.temp1 = head->next;
+	ptr_struct.temp1 = list->next;
 	/**
 	 * temp1 stores the address of successive structs, starting
 	 * from the struct head points to. temp2 stores the address
@@ -32,7 +32,7 @@ int check_cycle(listint_t *list)
 	for (;; ptr_struct.temp1 = (ptr_struct.temp1)->next)
 	{
 		int_struct.n++;
-		ptr_struct.temp2 = (listint_t *)head;
+		ptr_struct.temp2 = (listint_t *)list;
 		for (int_struct.i = 0; int_struct.i < int_struct.n; int_struct.i++)
 		{
 			if (ptr_struct.temp2 == ptr_struct.temp1 || ptr_struct.temp1 == NULL)
