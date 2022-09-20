@@ -10,4 +10,6 @@
 
 * 4-print_hexa.py: print numbers in hexadecimal.
 
+* 5-print_comb2.py: print numbers from 0 - 99 with width of two.
+
 
