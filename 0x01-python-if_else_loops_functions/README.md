@@ -16,4 +16,6 @@
 
 * 7-islower.py: returns True if char is lower; False otherwise.
 
+* 8-uppercase.py: print in uppercase.
+
 
