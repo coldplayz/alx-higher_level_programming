@@ -18,4 +18,8 @@
 
 * 8-uppercase.py: print in uppercase.
 
+* 9-print_last_digit.py: print and return last digit of a number.
 
+* 101-remove_char_at.py: remove char at specified index.
+
+* 102-magic_calculation.py: convert from bytecode to source code.
