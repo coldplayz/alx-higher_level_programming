@@ -58,9 +58,9 @@ int hash_srch(listint_t *st)
 		entry_cnt++;
 		for (i = 0; i < 64; i++)
 		{
-			list[offset++] = NULL; /* init list */
+			list[i] = NULL; /* init list */
 		}
-		list[0] = st;
+		list[offset++] = st;
 		return (0); /* no duplicate yet */
 	}
 
