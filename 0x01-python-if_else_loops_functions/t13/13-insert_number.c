@@ -14,13 +14,12 @@ listint_t *insert_node(listint_t **head, int number)
 	listint_t *new, *temp, *temp2 = NULL;
 	int i, list_len;
 
-	list_len = listint_len(*head);
+	if ((*head))
+		list_len = listint_len(*head);
 	new = malloc(sizeof(listint_t));
 	if (new == NULL)
 		return (NULL);
-
 	new->n = number;
-
 	temp = *head;  /* copy head so as not to modify the original */
 	for (i = 0; temp; i++)
 	{
@@ -37,19 +36,21 @@ listint_t *insert_node(listint_t **head, int number)
 			temp2->next = new;
 			break;
 		}
-
 		temp2 = temp;  /* temp2 saves current struct's pointer */
 		temp = temp->next;  /* temp points to next struct */
 	}
-
-	if (i == list_len)  /* temp == NULL */
+	if (*head == NULL)
+	{
+		*head = new;
+		new->next = NULL;
+	}
+	else if (i == list_len)  /* temp == NULL */
 	{
 		/* Insert at list end */
 		/* temp2 is a pointer to the last struct node of the list */
 		temp2->next = new;
 		new->next = NULL;  /* 'new' now last node of list */
 	}
-
 	return (new);
 }
 
