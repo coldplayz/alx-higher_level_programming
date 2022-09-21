@@ -20,4 +20,6 @@
 
 * 9-print_last_digit.py: print and return last digit of a number.
 
+* 101-remove_char_at.py: remove char at specified index.
+
 
