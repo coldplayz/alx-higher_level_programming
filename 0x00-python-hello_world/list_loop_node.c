@@ -7,12 +7,13 @@
 
 /**
  * check_cycle - returns the node on which a list's loop occurs, if any.
- * @list: the top of the list
+ * @head: the top of the list
  *
  * Return: 1 if loop exists; 0 otherwise.
  */
 int check_cycle(listint_t *list)
 {
+	int i, flag = 1, n = 0;
 	listint_t *temp1;
 
 	if (list == NULL)
@@ -50,7 +51,7 @@ int check_cycle(listint_t *list)
 int hash_srch(listint_t *st)
 {
 	static listint_t *list[64];
-	static int entry_cnt, offset;
+	static int entry_cnt = 0, offset = 0;
 	int i;
 
 	if (entry_cnt == 0)
