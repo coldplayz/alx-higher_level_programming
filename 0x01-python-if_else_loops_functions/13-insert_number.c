@@ -19,12 +19,12 @@ listint_t *insert_node(listint_t **head, int number)
 	if (new == NULL)
 		return (NULL);
 
-	new->n = n;
+	new->n = number;
 
 	temp = *head;  /* copy head so as not to modify the original */
 	for (i = 0; temp; i++)
 	{
-		if (temp->n >= n)
+		if (temp->n >= number)
 		{
 			if (temp == *head)
 			{
@@ -33,7 +33,6 @@ listint_t *insert_node(listint_t **head, int number)
 				*head = new;
 				break;
 			}
-
 			new->next = temp;
 			temp2->next = new;
 			break;
@@ -42,7 +41,7 @@ listint_t *insert_node(listint_t **head, int number)
 		temp2 = temp;  /* temp2 saves current struct's pointer */
 		temp = temp->next;  /* temp points to next struct */
 	}
-	
+
 	if (i == list_len)  /* temp == NULL */
 	{
 		/* Insert at list end */
@@ -52,4 +51,26 @@ listint_t *insert_node(listint_t **head, int number)
 	}
 
 	return (new);
+}
+
+
+
+/**
+ * listint_len - determines the number of elements of the structure listint_s
+ * @h: the head of a structure of type 'struct listint_s'
+ *
+ * Return: the number of nodes in the list
+ */
+size_t listint_len(const listint_t *h)
+{
+	size_t n = 0;
+	listint_t *temp;
+
+	temp = (listint_t *)h;
+	for (; temp; temp = temp->next)
+	{
+		n++;
+	}
+
+	return (n);
 }
