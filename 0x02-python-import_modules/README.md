@@ -10,4 +10,6 @@
 
 * 4-hidden_discovery.py: print all names defined the pre-compiled module hidden_4.pyc
 
+* 5-variable_load.py: import a variable and print it.
+
 
