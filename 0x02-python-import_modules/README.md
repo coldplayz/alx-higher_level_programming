@@ -12,4 +12,6 @@
 
 * 5-variable_load.py: import a variable and print it.
 
+* 100-my_calculator.py: handle basic operations specified on the command-line.
+
 
