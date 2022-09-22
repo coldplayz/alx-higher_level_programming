@@ -14,4 +14,6 @@
 
 * 100-my_calculator.py: handle basic operations specified on the command-line.
 
+* 101-easy_print.py: print without using print, eval, open, or import sys.
+
 
