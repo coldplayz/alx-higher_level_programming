@@ -6,4 +6,6 @@
 
 * 2-args.py: print number and list of its arguments.
 
+* 3-infinite_add.py: add and print the sum of all arguments.
+
 
