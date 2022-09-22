@@ -8,4 +8,6 @@
 
 * 3-infinite_add.py: add and print the sum of all arguments.
 
+* 4-hidden_discovery.py: print all names defined the pre-compiled module hidden_4.pyc
+
 
