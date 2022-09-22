@@ -4,4 +4,6 @@
 
 * 1-calculation.py: import and call muktiole functions from module
 
+* 2-args.py: print number and list of its arguments.
+
 
