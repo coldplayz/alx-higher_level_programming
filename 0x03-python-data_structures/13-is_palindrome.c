@@ -11,10 +11,15 @@
  */
 int is_palindrome(listint_t **head)
 {
-	size_t i, len = listint_len(*head);
+	size_t i, len;
 	int *pti;
 	listint_t *temp;
 
+	if (!head)
+	{
+		return (1);
+	}
+	len = listint_len(*head);
 	if (len == 0)
 	{
 		return (1);
