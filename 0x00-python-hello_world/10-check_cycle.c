@@ -49,14 +49,14 @@ int check_cycle(listint_t *list)
  */
 int hash_srch(listint_t *st)
 {
-	static listint_t *list[64];
+	static listint_t *list[128];
 	static int entry_cnt, offset;
 	int i;
 
 	if (entry_cnt == 0)
 	{
 		entry_cnt++;
-		for (i = 0; i < 64; i++)
+		for (i = 0; i < 128; i++)
 		{
 			list[i] = NULL; /* init list */
 		}
