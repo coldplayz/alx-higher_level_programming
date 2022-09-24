@@ -1,0 +1,7 @@
+find: ‘/vagrant/AppData/Local/Application Data’: Operation not permitted
+find: ‘/vagrant/AppData/Local/ElevatedDiagnostics’: Operation not permitted
+find: ‘/vagrant/AppData/Local/History’: Operation not permitted
+find: ‘/vagrant/AppData/Local/Microsoft/Windows/INetCache/Content.IE5’: Operation not permitted
+find: ‘/vagrant/AppData/Local/Microsoft/Windows/INetCache/Low/Content.IE5’: Operation not permitted
+find: ‘/vagrant/AppData/Local/Microsoft/Windows/Temporary Internet Files’: Operation not permitted
+find: ‘/vagrant/AppData/Local/Temp/msdtadmin’: Operation not permitted

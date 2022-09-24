@@ -28,4 +28,4 @@
 
 * 13-is_palindrome.c: checks whether a list is a palindrome.
 
-
+* 100-print_python_list_info.c: prints basic info about Python lists, in C code. 
