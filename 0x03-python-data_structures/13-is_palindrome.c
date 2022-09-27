@@ -51,6 +51,7 @@ int is_palindrome(listint_t **head)
 	{
 		if (pti[i] != temp->n) /* compare potential palindrome values*/
 		{
+			free(pti);
 			return (0);
 		}
 		temp = temp->next;
