@@ -24,10 +24,6 @@ int is_palindrome(listint_t **head)
 	{
 		return (1);
 	}
-	if (len % 2 != 0) /* odd list length */
-	{
-		return (0);
-	}
 
 	pti = malloc(sizeof(int) * (len / 2));
 	if (!pti)
@@ -43,6 +39,12 @@ int is_palindrome(listint_t **head)
 		/* of the second half of the list */
 		pti[i] = temp->n;
 		temp = temp->next;
+	}
+
+	if (len % 2 != 0)
+	{
+		/* odd list length */
+		temp = temp->next; /* skip the middle node */
 	}
 
 	for (i = ((len / 2) - 1); temp; i--)
