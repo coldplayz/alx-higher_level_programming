@@ -14,4 +14,6 @@
 
 * 6-print_sorted_dictionary.py: prints a dictionary by ordered keys.
 
+* 7-update_dictionary.py: replaces or adds key/value in a dictionary.
+
 
