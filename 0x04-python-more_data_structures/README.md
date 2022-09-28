@@ -26,4 +26,4 @@
 
 * 12-roman_to_int.py: converts roman numerals to integers.
 
-
+* 100-weight_average.py: returns the weighted average of all integers tuple (score, weight)
