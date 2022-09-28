@@ -10,4 +10,6 @@
 
 * 4-only_diff_elements.py: returns the set of elements exclusively present in two sets.
 
+* 5-number_keys.py: returns the number of keys in a dictionary.
+
 
