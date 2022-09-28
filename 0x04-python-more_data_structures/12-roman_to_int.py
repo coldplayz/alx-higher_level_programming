@@ -3,7 +3,7 @@
 def roman_to_int(roman_string):
     '''Converts roman numerals to integers'''
 
-    if type(roman_string) is not str or roman_string is None:
+    if type(roman_string) != str or roman_string is None:
         return 0
 
     rdict = dict(
@@ -14,6 +14,7 @@ def roman_to_int(roman_string):
     flag = False
     for i in range(len(roman_string)):
         if flag:
+            flag = False
             continue  # skip adding current value as its already added
         if i < len(roman_string) - 1:
             if rdict[roman_string[i + 1]] > rdict[roman_string[i]]:
