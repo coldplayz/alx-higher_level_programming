@@ -18,4 +18,6 @@
 
 * 8-simple_delete.py: deletes a dictionary entry by key.
 
+* 9-multiply_by_2.py: returns a new dictionary with double the original values.
+
 
