@@ -6,4 +6,6 @@
 
 * 2-uniq_add.py: adds all unique integers in a list.
 
+* 3-common_elements.py: returns the intersection of two sets.
+
 
