@@ -16,4 +16,6 @@
 
 * 7-update_dictionary.py: replaces or adds key/value in a dictionary.
 
+* 8-simple_delete.py: deletes a dictionary entry by key.
+
 
