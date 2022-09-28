@@ -24,4 +24,6 @@
 
 * 11-multiply_list_map.py: returns a new map-generated list.
 
+* 12-roman_to_int.py: converts roman numerals to integers.
+
 
