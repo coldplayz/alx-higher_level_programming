@@ -22,4 +22,6 @@
 
 * 10-best_score.py: returns key with biggest integer value.
 
+* 11-multiply_list_map.py: returns a new map-generated list.
+
 
