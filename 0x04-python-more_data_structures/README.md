@@ -20,4 +20,6 @@
 
 * 9-multiply_by_2.py: returns a new dictionary with double the original values.
 
+* 10-best_score.py: returns key with biggest integer value.
+
 
