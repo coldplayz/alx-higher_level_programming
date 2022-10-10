@@ -16,4 +16,4 @@
 
 * 100-safe_print_integer_err.py: prints an integer with error message on exception.
 
-
+* 101-safe_function.py: executes a function safely.
