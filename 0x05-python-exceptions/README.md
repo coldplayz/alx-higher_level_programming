@@ -4,4 +4,6 @@
 
 * 1-safe_print_integer.py: prints an integer with str.format()
 
+* 2-safe_print_list_integers.py: prints the first x elements of a list and only integers.
+
 
