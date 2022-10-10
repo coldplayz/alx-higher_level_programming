@@ -12,4 +12,6 @@
 
 * 5-raise_exception.py: raises a type exception.
 
+* 6-raise_exception_msg.py: raises a name exception with a message.
+
 
