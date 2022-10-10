@@ -8,4 +8,6 @@
 
 * 3-safe_print_division.py: divides 2 integers and prints the result.
 
+* 4-list_division.py: divides element by element 2 lists.
+
 
