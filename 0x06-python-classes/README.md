@@ -6,4 +6,6 @@
 
 * 2-square.py: optional init arg for square class
 
+* 3-square.py: add area method.
+
 
