@@ -4,4 +4,6 @@
 
 * 1-square.py: improvement on Square class
 
+* 2-square.py: optional init arg for square class
+
 
