@@ -12,4 +12,6 @@
 
 * 5-square.py: add method to print '#' based on area.
 
+* 6-square.py: add new attribute 'position'
+
 
