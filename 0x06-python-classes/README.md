@@ -10,4 +10,6 @@
 
 * 4-square.py: add size attribute property
 
+* 5-square.py: add method to print '#' based on area.
+
 
