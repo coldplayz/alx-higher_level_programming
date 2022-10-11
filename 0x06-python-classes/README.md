@@ -8,4 +8,6 @@
 
 * 3-square.py: add area method.
 
+* 4-square.py: add size attribute property
+
 
