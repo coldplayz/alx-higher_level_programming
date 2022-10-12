@@ -55,3 +55,20 @@ class Square:
                 print()
         elif self.__size == 0:
             print()
+
+    def __str__(self):
+        strr = ""
+        if self.__size > 0:
+            for i in range(self.__size):
+                if i == 0:
+                    for k in range(self.__position[1]):
+                        strr += "\n"
+                for j in range(self.__size):
+                    if j == 0:
+                        for m in range(self.__position[0]):
+                            strr += " "
+                    strr += "#"
+                strr += "" if i == (self.__size - 1) else "\n"
+        elif self.__size == 0:
+            strr += "\n"
+        return strr

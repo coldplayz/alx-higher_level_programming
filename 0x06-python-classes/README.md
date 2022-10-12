@@ -14,4 +14,8 @@
 
 * 6-square.py: add new attribute 'position'
 
+* 100-singly_linked_list.py: creates a class Node and class SinglyLinkedList.
+
+* 101-square.py: implement str representation of an instance.
+
 
