@@ -18,4 +18,4 @@
 
 * 101-square.py: implement str representation of an instance.
 
-
+* 102-square.py: implements comparism operations.

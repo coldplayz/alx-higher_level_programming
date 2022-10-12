@@ -70,5 +70,5 @@ class Square:
                     strr += "#"
                 strr += "" if i == (self.__size - 1) else "\n"
         elif self.__size == 0:
-            strr += "\n"
+            strr = ""
         return strr
