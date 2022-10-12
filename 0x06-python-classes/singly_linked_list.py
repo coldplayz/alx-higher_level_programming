@@ -48,43 +48,40 @@ class SinglyLinkedList:
 
         self.__ptr1 = self.__head
         if self.__ptr1:
-            self.__ptr2 = self.__ptr1.next_node
+            self.__ptr2 = self.__ptr1.__next_node
         else:
             return
 
-        if self.__ptr2 is None:
-            return
-
-        if self.__ptr1.data < self.__ptr2.data:
+        if self.__ptr1.__data < self.__ptr2.__data:
             return
 
         # save reference to previous head
-        self.__prev_head = self.__head.next_node
+        self.__prev_head = self.__head.__next_node
         while self.__ptr2:
-            if self.__head.data < self.__ptr2.data:
+            if self.__head.__data < self.__ptr2.__data:
                 # insert __head between ptr1 and ptr2
-                self.__ptr1.next_node = self.__head  # node ptr1 -> head
-                self.__head.next_node = self.__ptr2  # head -> node ptr2
+                self.__ptr1.__next_node = self.__head  # node ptr1 -> head
+                self.__head.__next_node = self.__ptr2  # head -> node ptr2
                 self.__head = self.__prev_head  # assign new head
                 return
 
             # move pointers forwards
             self.__ptr1 = self.__ptr2
-            self.__ptr2 = self.__ptr2.next_node
+            self.__ptr2 = self.__ptr2.__next_node
 
         # ptr2 now None; insert head at list tail
-        self.__ptr1.next_node = self.__head
-        self.__head.next_node = None
+        self.__ptr1.__next_node = self.__head
+        self.__head.__next_node = None
 
         # assign new head
         self.__head = self.__prev_head
 
     def __str__(self):
-        self.__strr = ""
+        strr = ""
         self.__tmp = self.__head
         while self.__tmp:
-            # compose string self.__strr
-            self.__strr += str(self.__tmp.data) + ("" if self.__tmp.next_node is None else "\n")
-            self.__tmp = self.__tmp.next_node
+            strr += str(self__tmp.__data) +\
+                    "" if self.__tmp.__next_node is None else "\n"
+            self.__tmp = self.__tmp.__next_node
 
-        return self.__strr
+        return strr
