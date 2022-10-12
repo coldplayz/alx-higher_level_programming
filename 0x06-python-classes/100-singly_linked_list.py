@@ -84,7 +84,8 @@ class SinglyLinkedList:
         self.__tmp = self.__head
         while self.__tmp:
             # compose string self.__strr
-            self.__strr += str(self.__tmp.data) + ("" if self.__tmp.next_node is None else "\n")
+            self.__strr += str(self.__tmp.data) +\
+                    ("" if self.__tmp.next_node is None else "\n")
             self.__tmp = self.__tmp.next_node
 
         return self.__strr
