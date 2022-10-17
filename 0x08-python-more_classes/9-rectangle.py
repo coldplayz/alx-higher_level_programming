@@ -87,15 +87,7 @@ class Rectangle:
 
         Returns:
             Rectangle: a new Rectangle with equal sides.
-
-        Raises:
-            TypeError: if size is not an integer, or is less than zero.
         '''
-
-        if type(size) is not int:
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
 
         return cls(size, size)
 
