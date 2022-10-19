@@ -35,6 +35,12 @@ Tests for ``add_integer()``
 	100
 	>>> print(f(100.3, -2))
 	98
+	>>> print(f(10e1000, 1.7976931348623157e+308))  # doctest: +ELLIPSIS
+	Traceback (innermost last):
+	OverflowError: ...
+	>>>
+	>>>
+	>>>
 
 
 	### for key in data.keys():
