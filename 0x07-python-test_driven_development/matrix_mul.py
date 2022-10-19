@@ -63,22 +63,22 @@ def matrix_mul(m_a, m_b):
 
     for ma_row_idx in range(len(m_a)):
         # iteration == number of rows to be in result
-        fact2_list = []  # factor one is m_a[ma_row_idx]
-        # Populate fact2_list with data from m_b
-        for mb_row in m_b:
-            fact2_list.append(mb_row[ma_row_idx])
-
         new_row = []
-        for j in fact2_list:
+        for j in m_a[ma_row_idx]:
             # init new_row with zero
             new_row.append(0)
 
         for i in range(len(m_b[0])):
             # iteration == number of columns to be in result
+            fact2_list = []  # factor one is m_a[ma_row_idx]
+            # Populate fact2_list with data from m_b
+            for mb_row in m_b:
+                fact2_list.append(mb_row[i])
+
             for i2 in range(len(fact2_list)):
                 # update columns in new_row
                 new_row[i] += m_a[ma_row_idx][i2] * fact2_list[i2]
-        
+
         result.append(new_row)
 
     return result

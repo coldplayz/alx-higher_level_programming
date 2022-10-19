@@ -17,7 +17,6 @@ def lazy_matrix_mul(m_a, m_b):
         list: the product of m_a and m_b.
     '''
 
-    '''
     # Argument validations
     if type(m_a) is not list:
         raise TypeError("m_a must be a list")
@@ -60,7 +59,6 @@ def lazy_matrix_mul(m_a, m_b):
         # number of columns in m_a not equal to number of rows in m_b
         # m_a not conformable to m_b for multiplication
         raise ValueError("m_a and m_b can't be multiplied")
-    '''
 
     result = np.dot(m_a, m_b)
 

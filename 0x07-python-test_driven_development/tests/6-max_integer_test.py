@@ -20,3 +20,18 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_result_type(self):
         self.assertIsInstance(max_integer(TestMaxInteger.data), int)
+
+    def test_max_start(self):
+        self.assertEqual(max_integer([9, 1, 4, 0]), [9, 1, 4, 0][0])
+
+    def test_max_end(self):
+        self.assertEqual(max_integer([1, 4, 0, 9]), [1, 4, 0, 9][3])
+
+    def test_neg_single(self):
+        self.assertEqual(max_integer([9, 1, -4, 0]), 9)
+
+    def test_neg_all(self):
+        self.assertEqual(max_integer([-9, -1, -4, -57]), -1)
+
+    def test_singleton(self):
+        self.assertEqual(max_integer([5]), 5)

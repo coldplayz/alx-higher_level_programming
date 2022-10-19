@@ -59,7 +59,9 @@ Interactive Tests for ``say_my_name()``
 	>>> f(None, {})
 	Traceback (innermost last):
 	TypeError: first_name must be a string
-	>>>
+	>>> f()  # doctest: +ELLIPSIS
+	Traceback (innermost last):
+	TypeError: ...
 	>>>
 	>>>
 	>>>

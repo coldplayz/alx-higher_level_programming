@@ -46,7 +46,9 @@ Interactive Tests for ``text_indentation()``
 	Traceback (innermost last):
 	TypeError: text must be a string
 	>>> f("")
-	>>>
+	>>> f()  # doctest: +ELLIPSIS
+	Traceback (innermost last):
+	TypeError: ...
 	>>>
 	>>>
 	>>>
