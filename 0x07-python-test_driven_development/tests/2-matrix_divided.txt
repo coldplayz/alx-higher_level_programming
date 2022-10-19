@@ -1,0 +1,70 @@
+==========================================
+Interactive Tests for ``matrix_divided()``
+==========================================
+
+	>>> from '0-add_integer' import add_integer  # doctest: +SKIP
+	>>> f = __import__('2-matrix_divided').matrix_divided
+
+
+	>>> data = {\
+	... 		'int': [0, 1, -1, 534, -435, 123456789, -123456789],\
+	... 		'float': [0, 1.7, -1.7, 56.12345, -56.123456, 0.123456789, -0.123456789],\
+	... 		'str': ["", "ta	b", "spa ce", "nospace", "@#$_&", "12ty"],\
+	... 		'list': [[], [1, 2.6, "string", {}, set(), (), None]],\
+	... 		'dict': [{}, {"k1": 1, "k2": None}],\
+	... 		'set': [set(), {'k1', 'k2', 1, 2.7, ()}],\
+	... 		'tuple': [(), (1, 2.9, "string", {}, None)],\
+	... 		'none': [None]}
+
+	>>> n = data['int']
+
+	>>> fl = data['float']
+
+	>>> s = data['str']
+
+	>>> l = data['list']
+
+	>>> d = data['dict']
+
+	>>> st = data['set']
+
+	>>> t = data['tuple']
+
+	
+	>>> m1 = [[1, 2, 3], [4, 5, 6]]
+	>>> m2 = [[-8, 7.91], [-3.5, 0]]
+	>>> m3 = [[1, 2, 3], [4, 5, 6, 7]]
+	>>> m4 = [[1, 2], [3, 'string']]
+	>>> m5 = [[1, 2], None]
+	>>> m6 = [[1, 2], (3, 4)]
+
+	>>> f({}, 5)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+	>>> f(None, 6)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+	>>> f(l, 0)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+	>>> f(m1, 0)
+	Traceback (innermost last):
+	ZeroDivisionError: division by zero
+	>>> print(f(m1, 3))
+	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+	>>> print(m1)
+	[[1, 2, 3], [4, 5, 6]]
+	>>> print(f(m2, 7))
+	[[-1.14, 1.13], [-0.5, 0.0]]
+	>>> f(m3, 5)
+	Traceback (most recent call last):
+	TypeError: Each row of the matrix must have the same size
+	>>> f(m4, 5)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+	>>> f(m5, 0)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+	>>> f(m6, 0)
+	Traceback (innermost last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats

@@ -1,0 +1,79 @@
+==========================================
+Interactive Tests for ``lazy_matrix_mul()``
+==========================================
+
+	>>> from '0-add_integer' import add_integer  # doctest: +SKIP
+	>>> f = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+
+	>>> data = {\
+	... 		'int': [0, 1, -1, 534, -435, 123456789, -123456789],\
+	... 		'float': [0, 1.7, -1.7, 56.12345, -56.123456, 0.123456789, -0.123456789],\
+	... 		'str': ["", "ta	b", "spa ce", "nospace", "@#$_&", "12ty"],\
+	... 		'list': [[], [1, 2.6, "string", {}, set(), (), None]],\
+	... 		'dict': [{}, {"k1": 1, "k2": None}],\
+	... 		'set': [set(), {'k1', 'k2', 1, 2.7, ()}],\
+	... 		'tuple': [(), (1, 2.9, "string", {}, None)],\
+	... 		'none': [None]}
+
+	>>> n = data['int']
+
+	>>> fl = data['float']
+
+	>>> s = data['str']
+
+	>>> l = data['list']
+
+	>>> d = data['dict']
+
+	>>> st = data['set']
+
+	>>> t = data['tuple']
+
+
+	>>> f((), None)
+	Traceback (innermost last):
+	TypeError: m_a must be a list
+	>>> f(l[0], None)
+	Traceback (innermost last):
+	TypeError: m_b must be a list
+	>>> f([(), {}], l)
+	Traceback (innermost last):
+	TypeError: m_a must be a list of lists
+	>>> f(l, [{}, "string"])
+	Traceback (innermost last):
+	TypeError: m_b must be a list of lists
+	>>> f([[]], [])
+	Traceback (innermost last):
+	TypeError: m_a can't be empty
+	>>> f(l, [])
+	Traceback (innermost last):
+	TypeError: m_b can't be empty
+	>>> f(l, [[1, 2], [3, 4]])
+	Traceback (innermost last):
+	TypeError: m_a should contain only integers or floats
+	>>> f([[1]], l)
+	Traceback (innermost last):
+	TypeError: m_b should contain only integers or floats
+	>>> f([[1, 2], [3, 4, 5]], [[1]])
+	Traceback (innermost last):
+	TypeError: each row of m_a must be of the same size
+	>>> f([[1]], [[1, 2], [3, 4, 5]])
+	Traceback (innermost last):
+	TypeError: each row of m_b must be of the same size
+	>>> f([[1]], [[1, 2], [3, 4]])
+	Traceback (innermost last):
+	ValueError: m_a and m_b can't be multiplied
+	>>> print(f([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
+	[[ 7 10]
+	 [15 22]]
+	>>> print(f([[1, 2]], [[3, 4], [5, 6]]))
+	[[13 16]]
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>

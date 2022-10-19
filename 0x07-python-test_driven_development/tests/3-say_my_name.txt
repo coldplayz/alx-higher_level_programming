@@ -1,0 +1,70 @@
+==========================================
+Interactive Tests for ``say_my_name()``
+==========================================
+
+	>>> from '0-add_integer' import add_integer  # doctest: +SKIP
+	>>> f = __import__('3-say_my_name').say_my_name
+
+
+	>>> data = {\
+	... 		'int': [0, 1, -1, 534, -435, 123456789, -123456789],\
+	... 		'float': [0, 1.7, -1.7, 56.12345, -56.123456, 0.123456789, -0.123456789],\
+	... 		'str': ["", "ta\tb", "spa ce", "new\nline", "@#$_&", "12ty"],\
+	... 		'list': [[], [1, 2.6, "string", {}, set(), (), None]],\
+	... 		'dict': [{}, {"k1": 1, "k2": None}],\
+	... 		'set': [set(), {'k1', 'k2', 1, 2.7, ()}],\
+	... 		'tuple': [(), (1, 2.9, "string", {}, None)],\
+	... 		'none': [None]}
+
+	>>> n = data['int']
+
+	>>> fl = data['float']
+
+	>>> s = data['str']
+
+	>>> l = data['list']
+
+	>>> d = data['dict']
+
+	>>> st = data['set']
+
+	>>> t = data['tuple']
+
+
+	>>> f("John", "Smith")
+	My name is John Smith
+	>>> f("Walter", "White")
+	My name is Walter White
+	>>> f("Greenbel")
+	My name is Greenbel 
+	>>> f("", "Rahab")
+	My name is  Rahab
+	>>> f(12, "White")
+	Traceback (innermost last):
+	TypeError: first_name must be a string
+	>>> f("Greenbel", s[1])  # doctest: +NORMALIZE_WHITESPACE
+	My name is Greenbel ta b
+	>>> f("GB", s[2])
+	My name is GB spa ce
+	>>> f("Mary", s[3])
+	My name is Mary new
+	line
+	>>> f("Barry", s[4])
+	My name is Barry @#$_&
+	>>> f("Mozart", s[5])
+	My name is Mozart 12ty
+	>>> f("Beethoven", None)
+	Traceback (innermost last):
+	TypeError: last_name must be a string
+	>>> f(None, {})
+	Traceback (innermost last):
+	TypeError: first_name must be a string
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>

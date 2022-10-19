@@ -1,0 +1,80 @@
+==========================================
+Interactive Tests for ``print_square()``
+==========================================
+
+	>>> from '0-add_integer' import add_integer  # doctest: +SKIP
+	>>> f = __import__('4-print_square').print_square
+
+
+	>>> data = {\
+	... 		'int': [0, 1, -1, 534, -435, 123456789, -123456789],\
+	... 		'float': [0, 1.7, -1.7, 56.12345, -56.123456, 0.123456789, -0.123456789],\
+	... 		'str': ["", "ta	b", "spa ce", "nospace", "@#$_&", "12ty"],\
+	... 		'list': [[], [1, 2.6, "string", {}, set(), (), None]],\
+	... 		'dict': [{}, {"k1": 1, "k2": None}],\
+	... 		'set': [set(), {'k1', 'k2', 1, 2.7, ()}],\
+	... 		'tuple': [(), (1, 2.9, "string", {}, None)],\
+	... 		'none': [None]}
+
+	>>> n = data['int']
+
+	>>> fl = data['float']
+
+	>>> s = data['str']
+
+	>>> l = data['list']
+
+	>>> d = data['dict']
+
+	>>> st = data['set']
+
+	>>> t = data['tuple']
+
+
+	>>> f(4)
+	####
+	####
+	####
+	####
+	>>> f(10)
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	>>> f(0)
+	<BLANKLINE>
+	>>> f(1)
+	#
+	>>> f(-5)
+	Traceback (innermost last):
+	TypeError: size must be >= 0
+	>>> f(-3.567)
+	Traceback (innermost last):
+	TypeError: size must be an integer
+	>>> f(0.914)
+	Traceback (innermost last):
+	TypeError: size must be an integer
+	>>> f([2])
+	Traceback (innermost last):
+	TypeError: size must be an integer
+	>>> f(None)
+	Traceback (innermost last):
+	TypeError: size must be an integer
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>

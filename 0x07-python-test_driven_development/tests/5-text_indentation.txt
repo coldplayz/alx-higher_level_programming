@@ -1,0 +1,64 @@
+==========================================
+Interactive Tests for ``text_indentation()``
+==========================================
+
+	>>> from '0-add_integer' import add_integer  # doctest: +SKIP
+	>>> f = __import__('5-text_indentation').text_indentation
+
+
+	>>> data = {\
+	... 		'int': [0, 1, -1, 534, -435, 123456789, -123456789],\
+	... 		'float': [0, 1.7, -1.7, 56.12345, -56.123456, 0.123456789, -0.123456789],\
+	... 		'str': ["", "ta	b", "spa ce", "nospace", "@#$_&", "12ty"],\
+	... 		'list': [[], [1, 2.6, "string", {}, set(), (), None]],\
+	... 		'dict': [{}, {"k1": 1, "k2": None}],\
+	... 		'set': [set(), {'k1', 'k2', 1, 2.7, ()}],\
+	... 		'tuple': [(), (1, 2.9, "string", {}, None)],\
+	... 		'none': [None]}
+
+	>>> n = data['int']
+
+	>>> fl = data['float']
+
+	>>> s = data['str']
+
+	>>> l = data['list']
+
+	>>> d = data['dict']
+
+	>>> st = data['set']
+
+	>>> t = data['tuple']
+
+
+	>>> f("st.ri: ng")
+	st.
+	<BLANKLINE>
+	ri:
+	<BLANKLINE>
+	ng
+	>>> f("string")
+	string
+	>>> f(12)
+	Traceback (innermost last):
+	TypeError: text must be a string
+	>>> f(None)
+	Traceback (innermost last):
+	TypeError: text must be a string
+	>>> f("")
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
