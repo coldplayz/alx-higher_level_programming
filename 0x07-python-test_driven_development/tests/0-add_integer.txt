@@ -38,7 +38,9 @@ Tests for ``add_integer()``
 	>>> print(f(10e1000, 1.7976931348623157e+308))  # doctest: +ELLIPSIS
 	Traceback (innermost last):
 	OverflowError: ...
-	>>>
+	>>> print(f(float('nan'), 100))  # doctest: +ELLIPSIS
+	Traceback (innermost last):
+	ValueError: ...
 	>>>
 	>>>
 
