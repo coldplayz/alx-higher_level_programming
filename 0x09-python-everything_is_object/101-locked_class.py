@@ -10,5 +10,7 @@ class LockedClass:
 
     def __setattr__(self, key, value):
         if key != 'first_name':
-            getattr(self, key)
+            raise AttributeError(
+                    f"'{self.__class__.__name__}'" +
+                    f" object has no attribute '{key}'")
         object.__setattr__(self, key, value)
