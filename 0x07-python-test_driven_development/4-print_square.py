@@ -23,4 +23,4 @@ def print_square(size):
             print()
     else:
         # size == 0
-        print('\n', end='')
+        print()

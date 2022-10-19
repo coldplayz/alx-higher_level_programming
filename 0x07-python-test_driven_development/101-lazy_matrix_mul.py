@@ -17,7 +17,6 @@ def lazy_matrix_mul(m_a, m_b):
         list: the product of m_a and m_b.
     '''
 
-    '''
     # Argument validations
     if type(m_a) is not list:
         raise TypeError("m_a must be a list")
@@ -33,10 +32,12 @@ def lazy_matrix_mul(m_a, m_b):
             if type(seq) is not list:
                 raise TypeError("m_b must be a list of lists")
 
+    '''
     if len(m_a) == 0 or (len(m_a) == 1 and len(m_a[0]) == 0):
         raise TypeError("m_a can't be empty")
     if len(m_b) == 0 or (len(m_b) == 1 and len(m_b[0]) == 0):
         raise TypeError("m_b can't be empty")
+    '''
 
     for elem in m_a:
         for num in elem:
@@ -60,7 +61,6 @@ def lazy_matrix_mul(m_a, m_b):
         # number of columns in m_a not equal to number of rows in m_b
         # m_a not conformable to m_b for multiplication
         raise ValueError("m_a and m_b can't be multiplied")
-    '''
 
     result = np.dot(m_a, m_b)
 
