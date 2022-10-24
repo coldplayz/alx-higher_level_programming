@@ -26,4 +26,4 @@
 
 * 100-my_int.py: creates a class MyInt that inherits from int.
 
-
+* 101-add_attribute.py: adds a new attribute to an object if possible.
