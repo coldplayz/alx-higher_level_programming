@@ -12,4 +12,8 @@
 
 * 5-base_geometry.py: creates class BaseGeometry.
 
+* 6-base_geometry.py: adds the area() public instance method.
+
+* 7-base_geometry.py: adds an integer validator method.
+
 
