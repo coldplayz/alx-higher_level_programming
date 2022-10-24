@@ -20,4 +20,6 @@
 
 * 9-rectangle.py: implements area() and __str__().
 
+* 10-square.py: adds a class Square that inherits from Rectangle.
 
+* 11-square.py: implements __str__().
