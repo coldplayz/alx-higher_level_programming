@@ -23,3 +23,7 @@
 * 10-square.py: adds a class Square that inherits from Rectangle.
 
 * 11-square.py: implements __str__().
+
+* 100-my_int.py: creates a class MyInt that inherits from int.
+
+
