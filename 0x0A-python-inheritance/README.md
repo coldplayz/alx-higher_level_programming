@@ -8,4 +8,8 @@
 
 * 3-is_kind_of_class.py: implements isinstance(obj, type).
 
+* 4-inherits_from.py: checks for subclassness.
+
+* 5-base_geometry.py: creates class BaseGeometry.
+
 
