@@ -4,4 +4,8 @@
 
 * 1-my_list.py: creates a custom list class.
 
+* 2-is_same_class.py: checks for exact instance.
+
+* 3-is_kind_of_class.py: implements isinstance(obj, type).
+
 
