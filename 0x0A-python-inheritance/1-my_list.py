@@ -4,7 +4,7 @@ Module for Mylist class.
 '''
 
 
-class Mylist(list):
+class MyList(list):
     '''
     Subclass of list for sorted print.
     '''

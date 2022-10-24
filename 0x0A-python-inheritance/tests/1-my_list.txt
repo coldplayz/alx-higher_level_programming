@@ -3,7 +3,7 @@ Interactive Tests for ``print_sorted()``
 ==========================================
 
 	>>> from '0-add_integer' import add_integer  # doctest: +SKIP
-	>>> cls = __import__('1-my_list').Mylist
+	>>> cls = __import__('1-my_list').MyList
 
 
 	>>> data = {\
