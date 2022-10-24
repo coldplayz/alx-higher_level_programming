@@ -1,0 +1,58 @@
+==========================================
+Interactive Tests for ``print_sorted()``
+==========================================
+
+	>>> from '0-add_integer' import add_integer  # doctest: +SKIP
+	>>> cls = __import__('1-my_list').Mylist
+
+
+	>>> data = {\
+	... 		'int': [0, 1, -1, 534, -435, 123456789, -123456789],\
+	... 		'float': [0, 1.7, -1.7, 56.12345, -56.123456, 0.123456789, -0.123456789],\
+	... 		'str': ["", "ta	b", "spa ce", "nospace", "@#$_&", "12ty"],\
+	... 		'list': [[], [1, 2.6, "string", {}, set(), (), None]],\
+	... 		'dict': [{}, {"k1": 1, "k2": None}],\
+	... 		'set': [set(), {'k1', 'k2', 1, 2.7, ()}],\
+	... 		'tuple': [(), (1, 2.9, "string", {}, None)],\
+	... 		'none': [None]}
+
+	>>> n = data['int']
+
+	>>> fl = data['float']
+
+	>>> s = data['str']
+
+	>>> l = data['list']
+
+	>>> d = data['dict']
+
+	>>> st = data['set']
+
+	>>> t = data['tuple']
+
+
+	>>> a = cls()
+	>>> a.extend([3, 6, -8, 1])
+	>>> a.print_sorted()
+	[-8, 1, 3, 6]
+	>>> b = cls()
+	>>> b.extend([1, 4, 2, 3, 5])
+	>>> print(b)
+	[1, 4, 2, 3, 5]
+	>>> b.print_sorted()
+	[1, 2, 3, 4, 5]
+	>>> print(b)
+	[1, 4, 2, 3, 5]
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
+	>>>
