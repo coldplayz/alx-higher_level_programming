@@ -16,4 +16,8 @@
 
 * 7-base_geometry.py: adds an integer validator method.
 
+* 8-rectangle.py: adds a class Rectangle that inherits from BaseGeometry.
+
+* 9-rectangle.py: implements area() and __str__().
+
 
