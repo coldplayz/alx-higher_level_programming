@@ -25,3 +25,5 @@
 * 11-student.py: implements attribute reload/refresh.
 
 * 12-pascal_triangle.py: returns a list of lists representing Pascal's triangle.
+
+* 100-append_after.py: updates a file.
