@@ -42,14 +42,30 @@ Interactive Tests for ``integer_validator()``
 	>>> bg.integer_validator("distance", -4)
 	Traceback (innermost last):
 	ValueError: distance must be greater than 0
-	>>>
-	>>>
-	>>>
-	>>>
-	>>>
-	>>>
-	>>>
-	>>>
+	>>> bg.integer_validator("age", (4,))
+	Traceback (innermost last):
+        TypeError: age must be an integer
+	>>> bg.integer_validator("age", [3])
+	Traceback (innermost last):
+        TypeError: age must be an integer
+	>>> bg.integer_validator("age", True)
+	Traceback (innermost last):
+        TypeError: age must be an integer
+	>>> bg.integer_validator("age", {3, 4})
+	Traceback (innermost last):
+        TypeError: age must be an integer
+	>>> bg.integer_validator("age", None)
+	Traceback (innermost last):
+        TypeError: age must be an integer
+	>>> bg.integer_validator("age")  # doctest: +ELLIPSIS
+	Traceback (innermost last):
+	TypeError: ...
+	>>> bg.integer_validator()  #doctest: +ELLIPSIS
+	Traceback (innermost last):
+	TypeError: ...
+	>>> bg.area()  #doctest: +ELLIPSIS
+	Traceback (innermost last):
+	Exception: ...
 	>>>
 	>>>
 	>>>
