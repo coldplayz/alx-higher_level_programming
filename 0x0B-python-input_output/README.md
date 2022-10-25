@@ -16,4 +16,6 @@
 
 * 7-add_item.py: adds all command-line arguments to a python list and saves to JSON file.
 
+* 8-class_to_json.py: returns a dictionary description of an object.
+
 
