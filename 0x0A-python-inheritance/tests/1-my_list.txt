@@ -43,9 +43,12 @@ Interactive Tests for ``print_sorted()``
 	[1, 2, 3, 4, 5]
 	>>> print(b)
 	[1, 4, 2, 3, 5]
-	>>>
-	>>>
-	>>>
+	>>> c = cls()
+	>>> c.append()  # doctest: +ELLIPSIS
+	Traceback (innermost last):
+	TypeError: ...
+	>>> c.print_sorted()
+	[]
 	>>>
 	>>>
 	>>>
