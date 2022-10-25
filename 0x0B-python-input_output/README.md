@@ -18,4 +18,8 @@
 
 * 8-class_to_json.py: returns a dictionary description of an object.
 
+* 9-student.py: creates a class Student.
+
+* 10-student.py: implements filtered attribute retrieval.
+
 
