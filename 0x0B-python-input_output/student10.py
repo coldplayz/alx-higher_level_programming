@@ -14,11 +14,14 @@ class Student:
 
     def to_json(self, attrs=None):
         dct = {}
+        filter_on = 0
 
         if type(attrs) is list:
             for attr in attrs:
                 if attr in self.__dict__:
                     dct.update({attr: self.__dict__[attr]})
-            return dct
+                    filter_on = 1
+            if filter_on:
+                return dct
 
         return self.__dict__
