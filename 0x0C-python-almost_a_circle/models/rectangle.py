@@ -3,6 +3,7 @@
 '''
 from models.base import Base
 
+
 class Rectangle(Base):
     '''A subclass of Base.
     '''
@@ -61,3 +62,22 @@ class Rectangle(Base):
         if y < 0:
             raise ValueError("y must be >= 0")
         self.__y = y
+
+    def area(self):
+        return self.__width * self.__height
+
+    def display(self):
+        for row_idx in range(self.__height):
+            if row_idx == 0:
+                for newline in range(self.__y):
+                    print()
+            for col_idx in range(self.__width):
+                if col_idx == 0:
+                    for space in range(self.__x):
+                        print(" ", end='')
+                print("#", end='')
+            print()
+
+    def __str__(self):
+        return f"{self.__class__.__name__} ({self.id})" +\
+                f" {self.__x}/{self.__y} {self.__width}/{self.__height}"
