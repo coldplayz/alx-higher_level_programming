@@ -68,7 +68,7 @@ class TestRectangle(unittest.TestCase):
     def test_str(self):
         '''Tests the string representation
         '''
-        self.assertEqual(str(self.r3), "Rectangle (12) 0/0 10/2")
+        self.assertEqual(str(self.r3), "[Rectangle] (12) 0/0 10/2")
 
     def test_update(self):
         '''Tests for proper update
