@@ -4,6 +4,7 @@
 import unittest
 from models.rectangle import Rectangle
 from models.base import Base
+from unittest.mock import patch
 
 
 class TestRectangle(unittest.TestCase):
@@ -11,10 +12,7 @@ class TestRectangle(unittest.TestCase):
     '''
 
     def setUp(self):
-        dct = dict(Base.__dict__)
-        dct.update({'_Base__nb_objects': 0})
-        Base = type("Base", (Base,), dct)
-        Rectangle.__bases__ = (Base,)
+        Rectangle.reset_nb()
         self.r1 = Rectangle(10, 2)
         self.r2 = Rectangle(2, 20)
         self.r3 = Rectangle(10, 2, 0, 0, 12)
@@ -71,3 +69,17 @@ class TestRectangle(unittest.TestCase):
         '''Tests the string representation
         '''
         self.assertEqual(str(self.r3), "Rectangle (12) 0/0 10/2")
+
+    def test_update(self):
+        '''Tests for proper update
+        '''
+        self.r1.update(50)
+        self.assertEqual(self.r1.id, 50)
+        self.r2.update(3, 30)
+        self.assertEqual(self.r2.width, 30)
+        self.r3.update(100, 200, 10, 5, 37)
+        self.assertEqual(self.r3.height, 10)
+        self.assertEqual(self.r3.x, 5)
+        self.assertEqual(self.r3.y, 37)
+        self.assertEqual(self.r3.id, 100)
+        self.assertRaises(TypeError, Rectangle, "50")

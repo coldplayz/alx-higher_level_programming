@@ -78,6 +78,19 @@ class Rectangle(Base):
                 print("#", end='')
             print()
 
+    def update(self, *args, **kwargs):
+        attrs = ['id', 'width', 'height', 'x', 'y']
+
+        if len(args):
+            for attr_idx in range(len(args)):
+                setattr(self, attrs[attr_idx], args[attr_idx])
+        else:
+            for key in kwargs:
+                setattr(self, key, kwargs[key])
+
+    def to_dictionary(self):
+        return dict(self.__dict__)
+
     def __str__(self):
-        return f"{self.__class__.__name__} ({self.id})" +\
+        return f"[{self.__class__.__name__}] ({self.id})" +\
                 f" {self.__x}/{self.__y} {self.__width}/{self.__height}"
