@@ -3,6 +3,7 @@
 '''
 import unittest
 from models.rectangle import Rectangle
+from models.base import Base
 
 
 class TestRectangle(unittest.TestCase):
@@ -10,12 +11,17 @@ class TestRectangle(unittest.TestCase):
     '''
 
     def setUp(self):
+        dct = dict(Base.__dict__)
+        dct.update({'_Base__nb_objects': 0})
+        Base = type("Base", (Base,), dct)
+        Rectangle.__bases__ = (Base,)
         self.r1 = Rectangle(10, 2)
         self.r2 = Rectangle(2, 20)
         self.r3 = Rectangle(10, 2, 0, 0, 12)
 
     def test_attr(self):
         '''Tests for correct attribute assignment.'''
+        self.assertEqual(self.r1.id, 1)
         self.assertEqual(self.r2.width, 2)
         self.assertEqual(self.r3.id, 12)
         self.assertEqual(self.r1.height, 2)

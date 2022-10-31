@@ -9,13 +9,16 @@ class TestBase(unittest.TestCase):
     '''Class for testing proper id allocation of Base instances.
     '''
 
+    @classmethod
+    def setUpClass(cls):
+        cls.Base2 = type("Base2", (Base,), dict(Base.__dict__))
+
     def setUp(self):
-        self.b1 = Base()
-        self.b2 = Base()
-        self.b3 = Base()
-        self.b4 = Base(12)
-        self.b5 = Base()
-        self.b6 = Base(-5)
+        self.b1 = self.__class__.Base2()
+        self.b2 = self.__class__.Base2()
+        self.b3 = self.__class__.Base2()
+        self.b4 = self.__class__.Base2(12)
+        self.b5 = self.__class__.Base2()
 
     def tearDown(self):
         del self.b1
@@ -23,7 +26,6 @@ class TestBase(unittest.TestCase):
         del self.b3
         del self.b4
         del self.b5
-        del self.b6
 
     def test_id(self):
         '''Tests for correct id assignment.'''
@@ -32,9 +34,9 @@ class TestBase(unittest.TestCase):
         self.assertEqual(self.b3.id, 3)
         self.assertEqual(self.b4.id, 12)
         self.assertEqual(self.b5.id, 4)
-        self.assertEqual(self.b6.id, -5)
+        self.assertRaises(TypeError, self.__class__.Base2, "5")
 
     def test_private(self):
         '''Test for inaccessibilty of private attribute.'''
         with self.assertRaises(AttributeError):
-            Base.__nb_objects
+            self.__class__.Base2.__nb_objects
