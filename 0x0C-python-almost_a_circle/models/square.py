@@ -17,10 +17,14 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        '''Gets size
+        '''
         return self.width
 
     @size.setter
     def size(self, size):
+        '''Sets size
+        '''
         if type(size) is not int:
             raise TypeError("width must be an integer")
         if size <= 0:
@@ -29,6 +33,8 @@ class Square(Rectangle):
         self.height = size
 
     def update(self, *args, **kwargs):
+        '''Updates an instance.
+        '''
         attrs = ['id', 'size', 'x', 'y']
 
         if len(args):
@@ -39,6 +45,8 @@ class Square(Rectangle):
                 setattr(self, key, kwargs[key])
 
     def to_dictionary(self):
+        '''Returns the dictionary representation of an instance.
+        '''
         dct = dict(self.__dict__)
         dct2 = {}
         dct_cpy = dct.copy()

@@ -9,6 +9,8 @@ class Rectangle(Base):
     '''
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        '''Class constructor
+        '''
         self.width = width
         self.height = height
         self.x = x
@@ -17,10 +19,14 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        '''Gets width
+        '''
         return self.__width
 
     @width.setter
     def width(self, width):
+        '''Sets width
+        '''
         if type(width) is not int:
             raise TypeError("width must be an integer")
         if width <= 0:
@@ -29,10 +35,14 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        '''Gets height
+        '''
         return self.__height
 
     @height.setter
     def height(self, height):
+        '''Sets height
+        '''
         if type(height) is not int:
             raise TypeError("height must be an integer")
         if height <= 0:
@@ -41,10 +51,14 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        '''Gets x
+        '''
         return self.__x
 
     @x.setter
     def x(self, x):
+        '''Sets x
+        '''
         if type(x) is not int:
             raise TypeError("x must be an integer")
         if x < 0:
@@ -53,10 +67,14 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        '''Gets y
+        '''
         return self.__y
 
     @y.setter
     def y(self, y):
+        '''Sets y
+        '''
         if type(y) is not int:
             raise TypeError("y must be an integer")
         if y < 0:
@@ -64,9 +82,13 @@ class Rectangle(Base):
         self.__y = y
 
     def area(self):
+        '''Returns the area of the Rectangle instance
+        '''
         return self.__width * self.__height
 
     def display(self):
+        '''Displays the Rectangle with a # character.
+        '''
         for row_idx in range(self.__height):
             if row_idx == 0:
                 for newline in range(self.__y):
@@ -79,6 +101,8 @@ class Rectangle(Base):
             print()
 
     def update(self, *args, **kwargs):
+        '''Updates the instance attribute
+        '''
         attrs = ['id', 'width', 'height', 'x', 'y']
 
         if len(args):
@@ -89,8 +113,12 @@ class Rectangle(Base):
                 setattr(self, key, kwargs[key])
 
     def to_dictionary(self):
+        '''Returns a dictionary representing an instance.
+        '''
         return dict(self.__dict__)
 
     def __str__(self):
+        '''String representation.
+        '''
         return f"[{self.__class__.__name__}] ({self.id})" +\
                 f" {self.__x}/{self.__y} {self.__width}/{self.__height}"
