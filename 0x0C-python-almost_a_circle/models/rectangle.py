@@ -115,10 +115,27 @@ class Rectangle(Base):
     def to_dictionary(self):
         '''Returns a dictionary representing an instance.
         '''
-        return dict(self.__dict__)
+        dct = dict(self.__dict__)
+        dct2 = {}
+        dct_cpy = dct.copy()
+        for key in dct_cpy:
+            if 'width' in key:
+                dct2.update(width=dct[key])
+                del dct[key]
+            elif 'height' in key:
+                dct2.update(height=dct[key])
+                del dct[key]
+            elif 'x' in key:
+                dct2.update(x=dct[key])
+                del dct[key]
+            elif 'y' in key:
+                dct2.update(y=dct[key])
+                del dct[key]
+        dct.update(dct2)
+        return dct
 
     def __str__(self):
         '''String representation.
         '''
         return f"[{self.__class__.__name__}] ({self.id})" +\
-                f" {self.__x}/{self.__y} {self.__width}/{self.__height}"
+            f" {self.__x}/{self.__y} - {self.__width}/{self.__height}"
