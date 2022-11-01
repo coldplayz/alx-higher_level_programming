@@ -33,8 +33,27 @@ class Base:
             return []
 
     @classmethod
+    def load_from_file_csv(cls):
+        try:
+            with open(f"{cls.__name__}.csv", 'r', encoding='utf-8') as fin:
+                s = fin.read()
+                dct_list = cls.from_json_string(s)
+                inst_list = []
+                for dct in dct_list:
+                    inst_list.append(cls.create(**dct))
+                return inst_list
+        except FileNotFoundError:
+            return []
+
+    @classmethod
     def create(cls, **dictionary):
-        inst = cls(1, 2)
+        try:
+            # For Square class; first argument is for size attribute...
+            # ...if an exception is raised, it indicates cls is Rectangle
+            inst = cls(1, 0)
+        except ValueError:
+            # For Rectangle class, as second argument should also be > 0
+            inst = cls(1, 1)
         inst.update(**dictionary)
         return inst
 
@@ -53,6 +72,17 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         with open(f"{cls.__name__}.json", 'w', encoding='utf-8') as fout:
+            s = []
+            if list_objs is not None:
+                for obj in list_objs:
+                    if isinstance(obj, Base):
+                        s.append(cls.to_dictionary(obj))
+            s = cls.to_json_string(s)
+            fout.write(s)
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        with open(f"{cls.__name__}.csv", 'w', encoding='utf-8') as fout:
             s = []
             if list_objs is not None:
                 for obj in list_objs:
