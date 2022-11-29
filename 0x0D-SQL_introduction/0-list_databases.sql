@@ -1,4 +1,4 @@
 -- shows all databases
 
 -- shows databases
-show databases;
+SHOW DATABASES;
