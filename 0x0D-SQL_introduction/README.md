@@ -8,4 +8,6 @@
 
 * 3-list_tables.sql: shows tables.
 
+* 4-first_table.sql: creates a table.
+
 
