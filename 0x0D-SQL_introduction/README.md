@@ -6,4 +6,6 @@
 
 * 2-remove_database.sql: drops database.
 
+* 3-list_tables.sql: shows tables.
+
 
