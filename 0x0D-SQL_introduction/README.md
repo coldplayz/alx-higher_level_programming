@@ -10,4 +10,6 @@
 
 * 4-first_table.sql: creates a table.
 
+* 5-full_table.sql: show table decription.
+
 
