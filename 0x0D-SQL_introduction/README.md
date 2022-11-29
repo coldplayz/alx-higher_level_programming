@@ -4,4 +4,6 @@
 
 * 1-create_database_if_missing.sql: creates database without errors.
 
+* 2-remove_database.sql: drops database.
+
 
