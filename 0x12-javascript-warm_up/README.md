@@ -8,4 +8,6 @@
 
 * 3-value_argument.js: prints the first argument passed to it.
 
+* 4-concat.js: prints two arguments passed to it, in the following format: “ is ”.
+
 
