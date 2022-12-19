@@ -6,4 +6,6 @@
 
 * 2-arguments.js: prints a message depending of the number of arguments passed.
 
+* 3-value_argument.js: prints the first argument passed to it.
+
 
