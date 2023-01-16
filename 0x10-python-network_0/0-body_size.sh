@@ -7,13 +7,13 @@ hdr=$(curl -Is "$1")
 IFS=$'\r\n' # also necessary for CRLF
 for line in $hdr
 do
-	line=${line@L} # convert line to lowercase
+	#line=${line@L} # convert line to lowercase
 	hdrline=${line%%:*} # get longest match
 	#echo $hdrline
-	if [[ "$hdrline" = 'content-length' ]]
+	if [[ "$hdrline" = 'Content-Length' ]]
 	then
 		# Extract the header value
-		data=${line#content-length*:}
+		data=${line#Content-Length*:}
 
 		# Remove all leading an trailing whitespaces
 		len1=${#data}
