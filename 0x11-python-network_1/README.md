@@ -8,4 +8,6 @@
 
 * 3-error_code.py: takes in a URL, sends a request to the URL and displays the body of the response (decoded in utf-8).
 
+* 4-hbtn_status.py: fetches https://alx-intranet.hbtn.io/status using Requests package.
+
 
