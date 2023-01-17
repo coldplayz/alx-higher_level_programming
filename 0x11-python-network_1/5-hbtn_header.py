@@ -12,4 +12,4 @@ if __name__ == '__main__':
     # Get the Response object
     response = requests.get(url)
 
-    print(response.headers['x-request-id'])
+    print(response.headers.get('x-request-id'))
