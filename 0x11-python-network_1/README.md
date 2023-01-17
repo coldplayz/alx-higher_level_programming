@@ -16,4 +16,6 @@
 
 * 7-error_code.py: takes in a URL, sends a request to the URL and displays the body of the response.
 
+* 8-json_api.py: takes in a letter and sends a POST request to http://0.0.0.0:5000/search_user with the letter as a parameter.
+
 
