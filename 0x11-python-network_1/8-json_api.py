@@ -17,12 +17,10 @@ if __name__ == '__main__':
     response = requests.post(url, data={'q': q})
 
     try:
-        jsonList = response.json()
-        if len(jsonList) == 0 or len(jsonList[0]) == 0:
+        jsonDict = response.json()
+        if len(jsonDict) == 0:
             print('No result')
         else:
-            dct = jsonList[0]
-            for k, v in dct.items():
-                print(f'[{k}] {v}')
+            print(f'[{jsonDict.get("id")}] {jsonDict.get("name")}')
     except requests.exceptions.JSONDecodeError:
         print('Not a valid JSON')
