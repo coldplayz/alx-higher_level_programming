@@ -8,4 +8,6 @@
 
 * 3-starwars_title.js: prints the title of a Star Wars movie where the episode number matches a given integer.
 
+* 4-starwars_count.js: prints the number of movies where the character “Wedge Antilles” is present.
+
 
