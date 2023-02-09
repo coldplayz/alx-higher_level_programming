@@ -10,4 +10,6 @@
 
 * 4-starwars_count.js: prints the number of movies where the character “Wedge Antilles” is present.
 
+* 5-request_store.js: gets the contents of a webpage and stores it in a file.
+
 
