@@ -6,4 +6,6 @@
 
 * 2-statuscode.js: display the status code of a GET request.
 
+* 3-starwars_title.js: prints the title of a Star Wars movie where the episode number matches a given integer.
+
 
