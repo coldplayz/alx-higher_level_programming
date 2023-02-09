@@ -12,4 +12,6 @@
 
 * 5-request_store.js: gets the contents of a webpage and stores it in a file.
 
+* 6-completed_tasks.js: computes the number of tasks completed by user id.
+
 
