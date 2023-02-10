@@ -15,3 +15,5 @@
 * 6-completed_tasks.js: computes the number of tasks completed by user id.
 
 * 100-starwars_characters.js: prints all characters of a Star Wars movie.
+
+* 101-starwars_characters.js: prints all characters of a Star Wars movie, in order as they appear in characters list of the /films/ endpoint.
