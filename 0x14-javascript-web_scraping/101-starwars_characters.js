@@ -17,7 +17,8 @@ request(url, function (err, response, body) {
   } else if (response.statusCode === 200) {
     body = JSON.parse(body);
     for (const i in body.characters) {
-      request(body.characters[i], function (err, response, body) {
+      const characterURL = body.characters[i];
+      request(characterURL, function (err, response, body) {
         if (err) {
           console.error(err);
         } else if (response.statusCode === 200) {
