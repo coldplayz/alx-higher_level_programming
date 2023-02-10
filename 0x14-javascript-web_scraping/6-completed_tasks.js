@@ -19,15 +19,20 @@ request(url, function (error, response, body) {
       body = JSON.parse(body);
     }
     // body is a list of todos dictionaries
-    let userID = -1;
     const resultsObj = {};
     for (const dict of body) {
-      if (dict.userId !== userID) {
-        userID = dict.userId;
-        resultsObj[String(dict.userId)] = 0; // initialize count
+      if (typeof resultsObj[dict.userId] === 'undefined') {
+        // Initialize the property
+        resultsObj[dict.userId] = 0; // initialize count
       }
       if (dict.completed) {
         resultsObj[dict.userId] += 1;
+      }
+    }
+    // Remove users with zero completed tasks
+    for (const uID in resultsObj) {
+      if (resultsObj[uID] === 0) {
+        delete resultsObj[uID];
       }
     }
     console.log(resultsObj);
